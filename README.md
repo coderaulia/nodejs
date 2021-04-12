@@ -22,6 +22,11 @@ Contohnya seperti bisa menggunakan file di system lokal, membuka dan membaca fil
 2. Business Logic. Atau menghandle request dari user, memvalidasi input dari user, terhubung ke database dll.
 3. Mengembalikan respon kepada user (merender ke HTML, XML, file atau JSON).
 
+## Basic Javascript
+
+Untuk bisa menggunakan Node.JS dengan baik, anda perlu memahami setidaknya sintaks dasar dari Javascript, dan fitur-fitur yang bisa digunakan. Anda dapat mengunjungi laman ini:
+https://github.com/coderaulia/nodejs/tree/main/basic-js
+
 ## Menginstall dan Menjalankan Node.JS
 
 1. Kunjungi nodejs.org/en/ dan donwload sesuai dengan operating system yang digunakan.

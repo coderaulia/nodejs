@@ -1,6 +1,10 @@
-var uname = "Coderaulia";
-var age = 23;
-var punyaHobi = true;
+// var uname = "Coderaulia";
+// var age = 23;
+// var punyaHobi = true;
+
+let uname = "Coderaulia";
+let age = 23;
+let punyaHobi = true;
 
 function getUser(userName, userAge, userPunyaHobi) {
 	return (
@@ -48,3 +52,14 @@ const orang = {
 };
 
 orang.salam();
+
+// Array
+
+const hobbies = ["Olahraga", "Coding", "Nonton Film"];
+// for (let hobi of hobbies) {
+// 	console.log(hobi);
+// } atau menggunakan map
+
+hobbies.map((hobi) => {
+	return "Hobi: " + hobi;
+});

@@ -50,3 +50,15 @@ Atau bisa menggunakan function. Untuk mendefinisikannya kita perlu menggunakan
 Perbedaannya adalah jika menggunakan keyword function kita perlu mendefinisikan properti sama seperti nama dan umur (`properti: function(){}`). Jika menggunakan properti sekaligus function, kita cukup menuliskan `properti()`.
 
 Contoh dapat dilihat di example.js.
+
+## Array
+
+Array adalah sekumpulan data yang memiliki index dan bisa kita akses secara perulangan ketika jumlahnya sangat banyak. Untuk membuat sebuah array kita dapat menggunakan cara seperti:
+
+`const hobbies = ['Olahraga', 'Coding', 'Melukis']`
+
+Olahraga merupakan index pertama, atau index 0 [0].
+
+Di dalam javascript terdapat fungsi bernama `map`, yang mana bisa kita jadikan alternatif pengulangan seperti `for` loop, `while` loop, dan lain sebagainya.
+
+Menggunakan `map` cukup mengetikkan `hobbies.map(hobi => 'Hobi saya: ' + hobi)`
