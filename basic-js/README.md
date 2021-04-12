@@ -19,3 +19,17 @@ Penting untuk memahami Javascript dasar dan sintaks-sintaksnya, sebelum terjun l
 Atau kini bisa menggunakan `let` atau `const` untuk menggunakan `var`.
 
 Contohnya bisa dilihat ke file example.js. Bagaimana cara memanggil variable ke sebuah fungsi.
+
+## Function
+
+Untuk membuat sebuah fungsi, bisa mendefinisikannya menggunakan:
+
+``function namaFungsi (parameter jika ada) {`
+`return value yg ingin dikembalikan`
+`}`
+
+Atau kini bisa menggunakan `arrow function` menggunakan tanda panah,
+
+`const namaFungsi = (parameter jika ada) => {}`
+
+Kini menggunakan `=>`, untuk membuat sebuah fungsi.
