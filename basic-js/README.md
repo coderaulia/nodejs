@@ -6,7 +6,11 @@ Penting untuk memahami Javascript dasar dan sintaks-sintaksnya, sebelum terjun l
 
 1. Sintaks dasar.
 2. Menjalankan javascript.
-3. Pemrograman berorientasi objek.
+3. Fungsi & Arrow Function.
+4. Objek.
+5. Array.
+6. Async & Promises.
+7. Pemrograman berorientasi objek.
 
 ## Variabel
 
@@ -24,9 +28,9 @@ Contohnya bisa dilihat ke file example.js. Bagaimana cara memanggil variable ke 
 
 Untuk membuat sebuah fungsi, bisa mendefinisikannya menggunakan:
 
-``function namaFungsi (parameter jika ada) {`
-`return value yg ingin dikembalikan`
-`}`
+function namaFungsi (parameter jika ada) {
+return value yg ingin dikembalikan
+}
 
 Atau kini bisa menggunakan `arrow function` menggunakan tanda panah,
 
