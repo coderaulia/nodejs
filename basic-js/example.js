@@ -27,3 +27,24 @@ const ambilUser = (userName, userAge, userPunyaHobi) => {
 
 //mengeluarkan value fungsi ke console log
 console.log(getUser(uname, age, punyaHobi));
+
+// OBJEK
+
+const orang = {
+	nama: "Aulia",
+	umur: 23,
+	salam: function () {
+		console.log("Halo, nama saya " + this.name);
+	},
+};
+
+//Atau
+const orang = {
+	nama: "Aulia",
+	umur: 23,
+	salam() {
+		console.log("Halo, nama saya " + this.name);
+	},
+};
+
+orang.salam();

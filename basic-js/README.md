@@ -37,3 +37,16 @@ Atau kini bisa menggunakan `arrow function` menggunakan tanda panah,
 `const namaFungsi = (parameter jika ada) => {}`
 
 Kini menggunakan `=>`, untuk membuat sebuah fungsi.
+
+## Objek
+
+Sebelumnya kita sudah belajar mengenai variable, untuk membuat objek, kita perlu mendefinikan sebuah variabel contohnya `orang` dan di dalamnya ada beberapa objek.
+
+Objek berisi dua pasang properti dan value, contohnya `nama: 'Aulia'`, artinya properti nama berisi value Aulia.
+
+Atau bisa menggunakan function. Untuk mendefinisikannya kita perlu menggunakan
+`function() {}` atau menggunakan `properti(){}`.
+
+Perbedaannya adalah jika menggunakan keyword function kita perlu mendefinisikan properti sama seperti nama dan umur (`properti: function(){}`). Jika menggunakan properti sekaligus function, kita cukup menuliskan `properti()`.
+
+Contoh dapat dilihat di example.js.
