@@ -9,8 +9,9 @@ Penting untuk memahami Javascript dasar dan sintaks-sintaksnya, sebelum terjun l
 3. Fungsi & Arrow Function.
 4. Objek.
 5. Array.
-6. Async & Promises.
-7. Pemrograman berorientasi objek.
+6. Spread & Rest Operator
+7. Async & Promises.
+8. Pemrograman berorientasi objek.
 
 ## Variabel
 
@@ -62,3 +63,16 @@ Olahraga merupakan index pertama, atau index 0 [0].
 Di dalam javascript terdapat fungsi bernama `map`, yang mana bisa kita jadikan alternatif pengulangan seperti `for` loop, `while` loop, dan lain sebagainya.
 
 Menggunakan `map` cukup mengetikkan `hobbies.map(hobi => 'Hobi saya: ' + hobi)`
+
+## Spread Operator
+
+Digunakan untuk mengeluarkan elemen atau properti dari sebuah array atau objek.
+Contoh penggunaannya, menambahkan tiga titik untuk mengeluarkan array hobbies menjadi array baru, tanpa ada nested array `const coppiedArray = [...hobbies];`.
+
+Sedangkan Rest operator digunakan untuk menggabungkan beberapa argumen atau parameter menjadi sebuah array. Ini akan memudahkan jika ada banyak argumen yg tidak terdefinisikan ingin diinput.
+Contoh penggunaannya, sama seperti spread yang menambahkan tiga titik di depan.
+`const toArray = (...args) => {`. Maka akan mengeluarkan value sejumlah yang diinputkan di dalamnya.
+
+Jika tidak menggunakan itu (`const toArray = (arg1, arg2, arg3) => {`). Maka hanya bisa mendapatkan argumen sebanyak 3 saja, jika ingin menambahkan ke-4 dst, tidak akan muncul.
+
+Bisa dilihat di file `spread-operator.js`.
