@@ -9,9 +9,10 @@ Penting untuk memahami Javascript dasar dan sintaks-sintaksnya, sebelum terjun l
 3. Fungsi & Arrow Function.
 4. Objek.
 5. Array.
-6. Spread & Rest Operator
-7. Async & Promises.
-8. Pemrograman berorientasi objek.
+6. Spread & Rest Operator.
+7. Destructuring Data.
+8. Async & Promises.
+9. Pemrograman berorientasi objek.
 
 ## Variabel
 
@@ -76,3 +77,18 @@ Contoh penggunaannya, sama seperti spread yang menambahkan tiga titik di depan.
 Jika tidak menggunakan itu (`const toArray = (arg1, arg2, arg3) => {`). Maka hanya bisa mendapatkan argumen sebanyak 3 saja, jika ingin menambahkan ke-4 dst, tidak akan muncul.
 
 Bisa dilihat di file `spread-operator.js`.
+
+## Destructuring
+
+Terkadang kita membutuhkan hanya beberapa properti dari objek atau array yang berisi banyak properti. Biasanya kita memanggilnya secara manual di return value, `const printNama = (orangData) => {console.log(orangData.nama);}`.
+Dari kode tersebut, kita perlu memanggil properti `nama` dari objek `orang`. Dengan menggunakan Destructuring, kita hanya perlu memanggil nama saja di parameter fungsinya.
+
+Contoh: `const printNama = ({ nama, umur }) => {console.log(nama);};`
+
+Atau dapat menggunakannya secara langsung, `const {nama, umur} = orang;`.
+
+Sedangkan menggunakannya dalam array, kita hanya perlu memanggil urutan index arraynya. Contoh:
+
+`const [hobi1, hobi2, hobi3] = hobbies;`
+`console.log(hobi1, hobi3);`
+Maka akan muncul index[0], dan index[2]. dari array `const hobbies = ["Olahraga", "Coding", "Nonton Film"];`
