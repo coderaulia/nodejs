@@ -92,3 +92,11 @@ Sedangkan menggunakannya dalam array, kita hanya perlu memanggil urutan index ar
 `const [hobi1, hobi2, hobi3] = hobbies;`
 `console.log(hobi1, hobi3);`
 Maka akan muncul index[0], dan index[2]. dari array `const hobbies = ["Olahraga", "Coding", "Nonton Film"];`
+
+## Async & Promise
+
+Asynchronous adalah sebuah code yang tidak secara langsung dieksekusi, memerlukan waktu tertentu untuk mengeksekusinya. Contohnya di javascript ada sebuah fungsi yang dikenal untuk membuat timer, ketika waktu habis sesuai yg sudah ditentukan, barulah menjalankan kode di dalamnya.
+
+Contohnya `setTimeout(() => {console.log("waktu habis!");}, 2000);`. Maka akan mengeksekusi `console.log` dalam waktu 2000 milisecond.
+
+Kita dapat mengetesnya dengan menambahkan `console log` lagi di bawahnya, maka akan muncul terlebih dahulu ketimbang `console log` pertama, inilah yg disebut synchronous code.
