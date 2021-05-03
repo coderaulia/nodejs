@@ -35,4 +35,4 @@ https://github.com/coderaulia/nodejs/tree/main/basic-js
 4. Ketikkan `node` di terminal untuk menjalankan nodejs di terminal. Seperti basic math dll. Jika ingin keluar tekan CTRL/Command + C.
 5. Bisa juga menggunakan Visual Studio Code. Jadi bisa menjalankannya di integrated terminal, dan menuliskan kode NodeJS dengan software ini.
 6. Untuk menjalankannya, anda perlu menyimpan kode dengan ekstensi .js, lalu menjalankannya di integrated terminal dengan cara `node nama-file.js`. Maka akan mengeluarkan value yang dituliskan di dalam kode.
-7. Anda juga bisa menggunakan layanan IDE online seperti REPL.it (https://replit.com).
+7. Anda juga bisa menggunakan layanan online seperti REPL.it (https://replit.com).
