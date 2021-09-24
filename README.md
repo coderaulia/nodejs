@@ -60,3 +60,10 @@ Sebelumnya kita telah berhasil membuat Node server, dan hanya menampilkan reques
 -  [x] Karena data yang di-listen berbentuk raw, sehingga perlu membuat `req.on('end')`, untuk melakukan parsing menjadi `string`. Dan buat variable message untuk meletakkan pesan yang telah di-parsing.
 -  [x] Kita perlu memanggil package `fs` untuk bekerja dengan file. Selanjutnya di dalam `req.on('end')` tadi, buatlah fungsi `fs.writeFileSync("message.txt", "TEST");`, untuk melakukan input text ke file.
 -  [x] Jalankan server, lalu inputkan data ke form, maka akan tercetak di message.txt pesan yang telah kita kirimkan sebelumnya.
+
+## Node Modules System
+
+-  [x] Sebelumnya kita telah berhasil membuat sebuah route di Node JS. Lalu bagaimana jika kita ingin memisahkan file routes dan memanggilnya di aplikasi (`node-modules-system.js`)?
+-  [x] Buat file routes.js, di dalamnya sama seperti di contoh sebelumnya (`route-example.js`). Hanya saja kita perlu membuat variable baru, disini bernama `requestHandler`.
+-  [x] Di akhir file, kita perlu melakukan export dengan cara `module.exports = requestHandler;`. requestHandler bisa saja menjadi nama variable lain.
+-  [x] Lalu kita panggil function requestHandler tersebut di `node-modules-system.js`. Perbedaannya kita perlu menggunakan ('./namafile) saat memanggil, karena ini adalah fungsi atau module yang berada di system lokal kita. Berbeda dengan `http` atau `fs` yang berada di Node Module Global.
