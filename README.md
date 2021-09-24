@@ -39,4 +39,24 @@ https://github.com/coderaulia/nodejs/tree/main/basic-js
 
 ## Membuat Node Server
 
-Contoh seperti di `app.js` file, kita perlu memanggil `http` module dari Node Modules. Selanjutnya, panggil http dan buat server dengan cara `http.createServer`. Lalu buat listen port `server.listen(port);`. Untuk menjalankannya, ketikkan `node app.js` di terminal, lalu buka url `localhost:port` di browser, maka akan muncul hasil `request` di terminal. Untuk menghentikan server dapat menekan `ctrl + c` di terminal. Dari sana akan muncul banyak sekali data request. Maka dari itu, perlu mendefinisikan apa saja yang ingin ditampilkan dari hasil request, beberapa informasi yang penting seperti `req.url, req.headers, req.method`.
+-  [x] Contoh seperti di `app.js` file, kita perlu memanggil `http` module dari Node Modules.
+-  [x] Selanjutnya, panggil http dan buat server dengan cara `http.createServer`.
+-  [x] Lalu buat listen port `server.listen(port);`. Untuk menjalankannya, ketikkan `node app.js` di terminal, lalu buka url `localhost:port` di browser, maka akan muncul hasil `request` di terminal.
+-  [x] Untuk menghentikan server dapat menekan `ctrl + c` di terminal. Dari sana akan muncul banyak sekali data request.
+-  [x] Maka dari itu, perlu mendefinisikan apa saja yang ingin ditampilkan dari hasil request, beberapa informasi yang penting seperti `req.url, req.headers, req.method`. Dapat dilihat di `request-example.js`.
+
+## Mengirim Response
+
+Sebelumnya kita telah berhasil membuat Node server, dan hanya menampilkan request saja. Sekarang kita akan belajar mengirimkan response ke hasil request server kita. Dapat dilihat di `response-example.js`.
+
+## Routing sederhana di Node JS
+
+-  [x] Untuk membuat sebuah route di Node JS, pertama perlu memanggil `req.url` seperti di contoh sebelumnya.
+-  [x] Lalu gunakan `if statement` untuk memastikan request yang kita inginkan, misal `"/"`, atau `"/home"` dsb.
+-  [x] Di dalamnya dapat kita buat berbeda dari laman di contoh sebelumnya. Seperti di contoh `route-example.js`.
+-  [x] Selanjutnya untuk melihat hasil pesan, kita buat route baru yaitu `"/message"`, dan berikan 1 kondisi lagi yaitu `method="POST"`.
+-  [x] Di dalamnya, kita perlu membuat variable body untuk menaruh semua data array yang akan di-listen.
+-  [x] Selanjutnya buat data listen menggunakan `req.on`. Dan push variable body tadi dengan raw data yg telah di-listen.
+-  [x] Karena data yang di-listen berbentuk raw, sehingga perlu membuat `req.on('end')`, untuk melakukan parsing menjadi `string`. Dan buat variable message untuk meletakkan pesan yang telah di-parsing.
+-  [x] Kita perlu memanggil package `fs` untuk bekerja dengan file. Selanjutnya di dalam `req.on('end')` tadi, buatlah fungsi `fs.writeFileSync("message.txt", "TEST");`, untuk melakukan input text ke file.
+-  [x] Jalankan server, lalu inputkan data ke form, maka akan tercetak di message.txt pesan yang telah kita kirimkan sebelumnya.
