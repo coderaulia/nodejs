@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
 		res.write("<html>");
 		res.write("<head><title>Send me a Message</title></head>");
 		res.write(
-			"<body><form action='/message' method='POST'><input type='text' placeholder='Message'><button type='submit'>Send!</button></form></body>"
+			"<body><form action='/message' method='POST'><input type='text' name='message' placeholder='Message'/><button type='submit'>Send!</button></form></body>"
 		);
 		res.write("</html>");
 		return res.end();
@@ -29,15 +29,16 @@ const server = http.createServer((req, res) => {
 			const parsedBody = Buffer.concat(body).toString();
 			// membelah respon di index pertama (message)
 			const message = parsedBody.split("=")[1];
-			// menggunakan fungsi menulis file ke txt
-			fs.writeFileSync("message.txt", message);
+			// menggunakan fungsi menulis file ke txt tanpa syncronous
+			fs.writeFile("message.txt", message, (err) => {
+				// status http
+				res.statusCode = 302;
+				// setting header ke root
+				res.setHeader("Location", "/");
+				// end
+				return res.end();
+			});
 		});
-		// status http
-		res.statusCode = 302;
-		// setting header ke root
-		res.setHeader("Location", "/");
-		// end
-		return res.end();
 	}
 
 	res.setHeader("Content-Type", "text/html");
