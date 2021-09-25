@@ -20,3 +20,11 @@ Dengan menggunakan Express, tentu akan memudahkan kita dalam mengatur request da
 
 Pada Vanilla Node.js, untuk membuat sebuah routes, kita perlu menggunakan if statement yang berisi url yang di-request. Sedangkan menggunakan Express, kita hanya perlu memanggil `app.use("/", (req, res, next) => {}`.
 Contoh dapat dilihat di example-routes.js.
+
+## Parsing & Method
+
+Express.js juga mempermudah kita untuk mengatur semua request menggunakan middleware. Selain itu juga lebih memudahkan dalam mengatur method seperti get, post, put, patch dsb. Contoh di `example-parsing.js`.
+
+## Sistem Routing di Express
+
+Pertama kita bisa membuat folder baru bernama routes. Selanjutnya buat file route, seperti `admin.js` untuk admin, dan `shop.js` untuk homepage. Untuk mencontohkannya kita akan membuat file baru bernama `example-home.js` (code yang sama seperti `example-parsing.js`), yang akan menggunakan `routes` dari folder routes. Di dalam file `admin.js`, alih-alih menggunakan `app.use` untuk membuat route, kini kita menggunakan `router.use` milik express yang telah dipanggil sebelumnya (`const router = express.Router();`). Di akhir file `admin.js` kita lakukan exports.router, lalu kita panggil di `example-home.js` seperti yang pernah kita lakukan sbeelumnya.
