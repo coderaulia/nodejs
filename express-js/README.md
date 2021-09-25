@@ -27,4 +27,16 @@ Express.js juga mempermudah kita untuk mengatur semua request menggunakan middle
 
 ## Sistem Routing di Express
 
-Pertama kita bisa membuat folder baru bernama routes. Selanjutnya buat file route, seperti `admin.js` untuk admin, dan `shop.js` untuk homepage. Untuk mencontohkannya kita akan membuat file baru bernama `example-home.js` (code yang sama seperti `example-parsing.js`), yang akan menggunakan `routes` dari folder routes. Di dalam file `admin.js`, alih-alih menggunakan `app.use` untuk membuat route, kini kita menggunakan `router.use` milik express yang telah dipanggil sebelumnya (`const router = express.Router();`). Di akhir file `admin.js` kita lakukan exports.router, lalu kita panggil di `example-home.js` seperti yang pernah kita lakukan sbeelumnya.
+Pertama kita bisa membuat folder baru bernama routes. Selanjutnya buat file route, seperti `admin.js` untuk admin, dan `shop.js` untuk homepage. Untuk mencontohkannya kita akan membuat file baru bernama `example-home.js` (code yang sama seperti `example-parsing.js`), yang akan menggunakan `routes` dari folder routes. Di dalam file `admin.js`, alih-alih menggunakan `app.use` untuk membuat route, kini kita menggunakan `router.use` milik express yang telah dipanggil sebelumnya (`const router = express.Router();`). Di akhir file `admin.js` kita lakukan exports.router, lalu kita panggil di `example-home.js` seperti yang pernah kita lakukan sebelumnya.
+
+## 404 not found handler
+
+Terkadang kita maupun pengguna bisa saja salah mengetikkan url dan seharusnya menampilkan pesan error. Akan tetapi secara default, express akan menampilkan pesan error yang tidak user-friendly. Maka dari itu kita bisa membuat 404 handler dengan membuat routes baru di home (contoh di `example-home.js`), dan tambahkan `.status(404)`, di antara `res.send`. Contoh `res.status(404).send('<h1>Sorry.. the page you looking for is not found :))</h1>')`.
+
+## Path Filtering
+
+Dengan Express kita dapat membuat filtering url path dengan menambahkan `'/url'` di example-home.js pada bagian Admin Routes. Sehingga setiap route dari admin.js, akan dimulai dengan '/admin'. Jangan lupa untuk menambahkannya juga di dalam admin.js bagian url form post.
+
+## Menggunakan HTML file di Views
+
+Buatlah dokumen html di folder baru bernama views. Selanjutnya, import `path` di semua file yang akan menggunakan views system. Di dalamnya kita perlu mengganti `res.send` menjadi `res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));`. Berlaku sama dengan halaman 404 di `example-home.js`.
