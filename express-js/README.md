@@ -11,3 +11,12 @@ Ada beberapa alternatif dari Express JS, seperti Vanilla Node Js, Adonis.js, Sai
 ## Menginstall dan Memanggil Express JS
 
 Anda hanya perlu mengetikan `npm install --save express`. `--save` digunakan untuk menambahkan `devDependencies` di `package.json`. lalu untuk memanggil express pertama harus memanggil menggunakan `require` sama seperti http dan fs. Setelah itu, inisialisasi Express dengan `const app = express();`. Dapat dilihat di `app.js`.
+
+## Middleware
+
+Dengan menggunakan Express, tentu akan memudahkan kita dalam mengatur request dan response. Salah satunya dengan Middleware. kita dapat menggunakannya dengan memanggil fungsi `app.use((req, res, next) => {}`. Sama seperti Vanilla Node.js, yang membedakan adalah kita menggunakan `app` yang sudah diinisiasi sebelumnya, lalu menggunakan `.use`. Di dalamnya juga sama, terdapat req, dan res, bedanya kini ada `next`. Yang memungkinkan kita untuk lompat ke middleware selanjutnya. Contoh sederhana dapat dilihat di `example-middleware.js`.
+
+## Routes
+
+Pada Vanilla Node.js, untuk membuat sebuah routes, kita perlu menggunakan if statement yang berisi url yang di-request. Sedangkan menggunakan Express, kita hanya perlu memanggil `app.use("/", (req, res, next) => {}`.
+Contoh dapat dilihat di example-routes.js.

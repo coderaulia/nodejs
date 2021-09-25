@@ -67,3 +67,7 @@ Sebelumnya kita telah berhasil membuat Node server, dan hanya menampilkan reques
 -  [x] Buat file routes.js, di dalamnya sama seperti di contoh sebelumnya (`route-example.js`). Hanya saja kita perlu membuat variable baru, disini bernama `requestHandler`.
 -  [x] Di akhir file, kita perlu melakukan export dengan cara `module.exports = requestHandler;`. requestHandler bisa saja menjadi nama variable lain.
 -  [x] Lalu kita panggil function requestHandler tersebut di `node-modules-system.js`. Perbedaannya kita perlu menggunakan ('./namafile) saat memanggil, karena ini adalah fungsi atau module yang berada di system lokal kita. Berbeda dengan `http` atau `fs` yang berada di Node Module Global.
+
+## Express.js
+
+Semua penjelasan mengenai Express.js, dapat anda lihat di dalam folder ini (https://github.com/coderaulia/nodejs/tree/main/express-js). Terima kasih.
