@@ -10,6 +10,8 @@ const shopRoutes = require("./routes/shop");
 
 // parser
 app.use(bodyParsers.urlencoded({ extended: false }));
+// menggunakan static folder
+app.use(express.static(path.join(__dirname, "public")));
 
 // memanggil routes dari routes/admin.js
 app.use("/admin", adminRoutes);

@@ -40,3 +40,15 @@ Dengan Express kita dapat membuat filtering url path dengan menambahkan `'/url'`
 ## Menggunakan HTML file di Views
 
 Buatlah dokumen html di folder baru bernama views. Selanjutnya, import `path` di semua file yang akan menggunakan views system. Di dalamnya kita perlu mengganti `res.send` menjadi `res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));`. Berlaku sama dengan halaman 404 di `example-home.js`.
+
+## Membuat Helper untuk Root Directory
+
+Di bagian menggunakan HTML file di Views, kita telah berhasil menggunakan `sendFile` dan di dalamnya terdapat `__dirname`, dan dilanjutkan dengan `../`. Cara ini tidak efektif jika kita bekerja dengan sistem operasi berbeda. Dalam sistem linux, untuk mengubah directory secara default menggunakan `"/"`, sedangkan di Windows kita menggunakan `"\"` atau `backslash` di atas tombol enter.
+
+Sehingga kita perlu melakukan standarisasi menggunakan helper. Dapat dilihat di `helper/path.js`.
+
+## Menggunakan Public Static file
+
+Mengakses file secara langsung tidak diperbolehkan oleh Express secara default. Contohnya jika anda mengakses file `shop.html` secara langsung di browser, maka akan muncul 404 error. Sehingga ini akan menyulitkan jika ingin menggunakan file-file seperti CSS, dan Gambar.
+
+Untuk itu kita perlu melakukan inisialisasi bahwa folder public dapat diakses secara langsung. Pertama, kita perlu memanggil css di file HTML, dengan cara seperti biasa yaitu dengan tag Link dan file berasal dari `"/css/namafile.css"`. Selanjutnya kita lakukan inisialisasi di example-home.js menggunakan app.use: `app.use(express.static(path.join(__dirname, "public")));`. Hal ini diperlukan untuk memberitahukan Express bahwa semua file di folder public adalah file static yang bisa diakses secara langsung.

@@ -1,12 +1,15 @@
 const path = require("path");
 const express = require("express");
 
+// root directory
+const rootDir = require("../helper/path");
+
 // memanggil router
 const router = express.Router();
 
 // tambah middleware baru tanpa ada next
 router.use("/add-product", (req, res, next) => {
-	res.sendFile(path.join(__dirname, "../", "views", "add-product.html"));
+	res.sendFile(path.join(rootDir, "views", "add-product.html"));
 });
 
 // different request
