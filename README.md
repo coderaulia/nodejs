@@ -71,3 +71,9 @@ Sebelumnya kita telah berhasil membuat Node server, dan hanya menampilkan reques
 ## Express.js
 
 Semua penjelasan mengenai Express.js, dapat anda lihat di dalam folder ini (https://github.com/coderaulia/nodejs/tree/main/express-js). Terima kasih.
+
+## Membuat Dynamic Content & Templating Engine di Node.Js
+
+Akan sangat melelahkan jika bekerja dengan file yang banyak dan terdapat banyak code yang berulang. Sehingga kita perlu membuat konten yang dinamis dan membuat system templating untuk membuat workflow dan aplikasi kita lebih mudah dibangun dan digunakan.
+
+Anda dapat melihatnya di folder ini: (https://github.com/coderaulia/nodejs/tree/main/dynamic-templating).
